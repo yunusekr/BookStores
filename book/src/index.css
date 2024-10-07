@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  background-image: url("https://kultur.istanbul/gorsel/2022/03/kapak.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Arka planı tam sayfaya yayar */
+  background-position: center;
+  background-attachment: fixed; /* Sabit arka plan */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.6; /* Sadece arka plan opak */
+  z-index: -1; /* Arka plana geri çek */
+}
